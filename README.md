@@ -1,3 +1,59 @@
+#### (Portuguese version below)
+
+# Churn Prediction Project - Interconnect
+
+## Description
+This project was developed as part of a final sprint to predict customer churn for the telecommunications provider Interconnect. The task involved analyzing customer personal data, plans, and contracts to identify churn patterns and create a machine learning model. The goal is to provide insights that allow the company to offer promotional codes and special plans to retain at-risk customers. The dataset includes information on contracts, personal data, internet, and phone services.
+
+## Prerequisites
+To run this project, you will need the following libraries and tools:
+- Python 3.8 or higher
+- Libraries:
+  - `pandas` (for data manipulation)
+  - `numpy` (for numerical computations)
+  - `matplotlib` and `seaborn` (for data visualization)
+  - `scikit-learn` (for modeling)
+  - `xgboost` (for the final model)
+- Jupyter Notebook (to run the code)
+
+## Usage
+
+Open the `Interconnect.ipynb` file in Jupyter Notebook.
+
+Run all cells in sequence to load the data, perform exploratory analysis, create features, and train the model.
+
+The results, including charts and the AUC-ROC score, will be displayed in the cell outputs.
+
+The final report is in the last cell, summarizing the steps and conclusions.
+
+## Results
+
+### Exploratory Analysis
+
+We identified that new customers (contract duration < 100 days), with *Month-to-month* contracts and high `monthly_charges`, are more likely to churn. Customers with more services (average of 2–3) and a lower average ticket (~23) tend to have lower churn rates.
+
+### Final Model
+
+We used an `XGBoost Classifier` with `scale_pos_weight` adjusted for imbalance (~2.77), achieving an **AUC-ROC of 0.9286**. Features such as `contract_duration`, `num_services`, and `avg_ticket_per_service` were key.
+
+### Conclusion
+
+We recommend offering promotional codes, free streaming packages, or annual/biennial plans with discounts during the first 100 days, prioritizing customers with fewer services or high cost per service.
+
+# Contributions
+
+- **Author:** Thiago Zanin - thiagozanin.tz@gmail.com
+
+Contributions are welcome! To suggest improvements or report bugs, open an *issue* in the repository or submit a *pull request* with proposed changes.
+
+
+_____________________________________________________________________
+_____________________________________________________________________
+_____________________________________________________________________
+_____________________________________________________________________
+
+Versão em português
+
 # Projeto de Previsão de Churn - Interconnect
 
 ## Descrição
